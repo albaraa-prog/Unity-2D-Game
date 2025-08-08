@@ -46,6 +46,7 @@ public class Worker : MonoBehaviour
                 {
                     nextCollectTime = Time.time + timeBetweenCollect;
                     currentResource.resourceAmount -= collectAmount;
+                    ResourceManager.instance.AddResource(currentResource.resourceType, collectAmount);
                 }
             }
         }
